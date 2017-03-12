@@ -1,4 +1,4 @@
-class ListingController < ApplicationController
+class ListingsController < ApplicationController
     before_action :authenticate_user!, except: [:index]
     before_action :set_listing, only: [:update, :show, :edit]
     
@@ -40,8 +40,10 @@ class ListingController < ApplicationController
     end
     
     def create
-        @listing = current_user.listings.new
-        @listing.update_attributes(title: listing_params[:title],
+        @user = current_user
+        @listing = Listing.new
+        @listing.update_attributes(user_id: @user.id,
+                title: listing_params[:title],
                 lat: listing_params[:lat],
                 lon: listing_params[:lon],
                 category: listing_params[:category],
