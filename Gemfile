@@ -40,6 +40,7 @@ gem 'devise'
 gem 'faker'
 gem 'figaro'
 gem 'simple_form'
+gem 'formtastic', '~> 3.1', '>= 3.1.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
