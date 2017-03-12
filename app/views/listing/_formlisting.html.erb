@@ -1,0 +1,14 @@
+<%= simple_form_for(@listing, html: { class: "form-group" }) do |f| %>
+    <%= f.input :title, required:true, wrapper_html:{		} %>
+    
+    <%= f.input :category, wrapper_html:{		} %>
+    <%= f.input :acc_cash, wrapper_html:{		} %>
+    <%= f.input :acc_trade, wrapper_html:{		} %>
+    <%= f.input :description, wrapper_html:{		} %>
+    <%= f.input :wants, wrapper_html:{		} %>
+    <%= f.input :quantity, wrapper_html:{		} %>
+    <%= f.input :harvest_date, wrapper_html:{		} %>
+    <%= f.input :exp_date, wrapper_html:{		} %>
+    <%= f.input :picture, as: :file, wrapper_html:{		} %>
+    <%= f.button :submit %>
+<% end %>
