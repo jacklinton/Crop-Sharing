@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170312024758) do
+ActiveRecord::Schema.define(version: 20170312032055) do
 
   create_table "listings", force: :cascade do |t|
     t.integer  "user_id"
@@ -26,8 +26,12 @@ ActiveRecord::Schema.define(version: 20170312024758) do
     t.date     "harvest_date"
     t.date     "exp_date"
     t.boolean  "complete"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
 end
