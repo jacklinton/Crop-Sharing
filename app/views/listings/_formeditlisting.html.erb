@@ -1,0 +1,14 @@
+<%= simple_form_for(@listing, html: {  }) do |f| %>
+    <%= f.input :title, required:true, wrapper_html:{ class: "form-group" }, label_html: {class: "col-2 col-form-label"}, input_html: { class: "form-control", value: @listing.title } %>
+    
+    <%= f.input :category, wrapper_html: { class: "form-group" }, label_html: {class: "col-2 col-form-label"}, input_html: {class: "form-control", value: @listing.category} %>
+    <%= f.input :acc_cash, wrapper_html: { class: "form-check form-check-inline" }, label_html: {}, input_html: { value: @listing.acc_cash } %>
+    <%= f.input :acc_trade, wrapper_html: { class: "form-check form-check-inline" }, label_html: {}, input_html: { value: @listing.acc_trade } %>
+    <%= f.input :description, wrapper_html: { class: "col-6" }, label_html: {class: "col-2 col-form-label"}, input_html: {class: "form-control", value: @listing.description } %>
+    <%= f.input :wants, wrapper_html: {	class: "col-6" }, label_html: {class: "col-2 col-form-label"}, input_html: {class: "form-control", value: @listing.wants} %>
+    <%= f.input :quantity, wrapper_html: { class: "col-6" }, label_html: {class: "col-2 col-form-label"}, input_html: {class: "form-control", value: @listing.quantity} %>
+    <%= f.input :harvest_date, as: :date, html5: true, wrapper_html: { class: "col-6" }, label_html: {class: "col-2 col-form-label"}, input_html: {class: "form-control", value: @listing.harvest_date} %>
+    <%= f.input :exp_date, as: :date, html5: true, wrapper_html: { class: "col-6" }, label_html: {class: "col-2 col-form-label"}, input_html: {class: "form-control", value: @listing.exp_date} %>
+    <%= f.input :picture, as: :file, wrapper_html: { class: "col-6" }, label_html: {class: "col-2 col-form-label"}, input_html: {class: "form-control-file"} %>
+    <%= f.button :submit, wrapper_html: { class: "btn btn-primary"} %>
+<% end %>

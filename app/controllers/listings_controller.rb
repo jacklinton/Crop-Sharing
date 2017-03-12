@@ -63,6 +63,10 @@ class ListingsController < ApplicationController
             render :new
         end
     end
+    
+    def delete
+        @listing.destroy
+    end
 end
 
 private
