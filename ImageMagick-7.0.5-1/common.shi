@@ -1,0 +1,22 @@
+# Test environment
+top_srcdir='/home/ubuntu/workspace/ImageMagick-7.0.5-1'
+top_builddir='/home/ubuntu/workspace/ImageMagick-7.0.5-1'
+
+set -a
+COMPARE="/home/ubuntu/workspace/ImageMagick-7.0.5-1/utilities/magick compare"
+COMPOSITE="/home/ubuntu/workspace/ImageMagick-7.0.5-1/utilities/magick composite"
+CONJURE="/home/ubuntu/workspace/ImageMagick-7.0.5-1/utilities/magick conjure"
+CONVERT="/home/ubuntu/workspace/ImageMagick-7.0.5-1/utilities/magick convert"
+DISPLAY="/home/ubuntu/workspace/ImageMagick-7.0.5-1/utilities/magick display"
+IDENTIFY="/home/ubuntu/workspace/ImageMagick-7.0.5-1/utilities/magick identify"
+MAGICK="/home/ubuntu/workspace/ImageMagick-7.0.5-1/utilities/magick"
+MONTAGE="/home/ubuntu/workspace/ImageMagick-7.0.5-1/utilities/magick montage"
+VALIDATE="/home/ubuntu/workspace/ImageMagick-7.0.5-1/tests/validate"
+DRAWTEST="/home/ubuntu/workspace/ImageMagick-7.0.5-1/tests/drawtest"
+WANDTEST="/home/ubuntu/workspace/ImageMagick-7.0.5-1/tests/wandtest"
+LD_LIBRARY_PATH="/home/ubuntu/workspace/ImageMagick-7.0.5-1/magick/.libs:${LD_LIBRARY_PATH}"
+MAGICK_CODER_MODULE_PATH="/home/ubuntu/workspace/ImageMagick-7.0.5-1/coders"
+MAGICK_CONFIGURE_PATH="/home/ubuntu/workspace/ImageMagick-7.0.5-1/config:/home/ubuntu/workspace/ImageMagick-7.0.5-1/config"
+MAGICK_FILTER_MODULE_PATH="/home/ubuntu/workspace/ImageMagick-7.0.5-1/filters"
+PATH="/home/ubuntu/workspace/ImageMagick-7.0.5-1/utilities:/home/ubuntu/workspace/ImageMagick-7.0.5-1/tests:${PATH}"
+set +a
