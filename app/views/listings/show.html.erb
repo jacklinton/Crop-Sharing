@@ -1,0 +1,22 @@
+
+<h1>Title: <%= @listing.title %></h1>
+<br>
+<br>
+<p>Created by: <%= @listing.user_id %></p>
+<br>
+<p>Category: <%= @listing.category %></p>
+<br>
+<p>Description: <%= @listing.description %></p>
+<br>
+<p>Wants: <%= @listing.wants %></p>
+<br>
+<p>Quantity: <%= @listing.quantity %></p>
+<br>
+<p>Harvest Date: <%= @listing.harvest_date %></p>
+<br>
+<p>Listing Expiration: <%= @listing.exp_date %></p>
+<br>
+<p><%= image_tag @listing.picture %> </p>
+
+<%= button_to "Edit Listing", edit_listing_path(@listing), method: :get, html: { class: "btn btn-primary" } %>
+<%= button_to "Delete Listing", listing_path(@listing), method: :delete, html: { class: "btn btn-primary" } %>

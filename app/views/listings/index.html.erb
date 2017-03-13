@@ -1,0 +1,31 @@
+ <div class="container-fluid">     
+    <h1>Listings Table</h1>    
+        <table id="listings" class="display responsive no-wrap" classspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Picture</th>
+                    <th>Title</th>
+                    <th>Distance</th>
+                    <th>Description</th>
+                    <th>Accepting Cash?</th>
+                    <th>Accepting Trade?</th>
+                    <th>Wants</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @listings.each do |l| %>
+                    <tr>
+                        <td><%= image_tag l.picture:thumb %></td>
+                        <td><%= l.title %></td>
+                        <td>distance</td>
+                        <td><%= l.description %></td>
+                        <td><%= l.acc_cash %></td>
+                        <td><%= l.acc_trade %></td>
+                        <td><%= l.wants %></td>
+                        <td><%= link_to "Read more", listing_path(l) %></td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+</div>  
