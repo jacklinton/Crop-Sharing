@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
+gem "pg"
 gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
@@ -42,6 +43,8 @@ gem 'figaro'
 gem 'simple_form'
 gem 'jquery-datatables-rails'
 gem 'ajax-datatables-rails'
+gem 'geokit-rails'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -58,11 +61,10 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'sqlite3'
 end
 
 group :production do
-  gem "pg"
+
 end
 
 
