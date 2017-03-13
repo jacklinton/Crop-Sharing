@@ -38,6 +38,8 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    ajax-datatables-rails (0.3.1)
+      railties (>= 3.1)
     arel (7.1.4)
     autoprefixer-rails (6.7.7)
       execjs
@@ -206,6 +208,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ajax-datatables-rails
   autoprefixer-rails
   aws-sdk
   bcrypt (~> 3.1.7)
@@ -217,7 +220,7 @@ DEPENDENCIES
   faker
   figaro
   jbuilder (~> 2.5)
-  jquery-datatables-rails (~> 3.4.0)
+  jquery-datatables-rails
   jquery-rails
   listen (~> 3.0.5)
   paperclip

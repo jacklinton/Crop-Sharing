@@ -40,7 +40,8 @@ gem 'devise'
 gem 'faker'
 gem 'figaro'
 gem 'simple_form'
-gem 'jquery-datatables-rails', '~> 3.4.0'
+gem 'jquery-datatables-rails'
+gem 'ajax-datatables-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
