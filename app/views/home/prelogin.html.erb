@@ -37,7 +37,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-               <a class="navbar-logo" href="#"><%= brand-image-medium.png %></a>
+               <a class="navbar-logo" href="#"><%= images/brand-image-medium.png %></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
@@ -75,7 +75,7 @@
                                         </div>
                                         <div class="navbar-footer-content" align="center">
                                           <input type="reset" class="btn btn btn-sm btn-info" type="reset" value="Reset Button">
-                                          <a class="btn btn-sm btn-primary" href="post-login-blog.html.erb" role="button">Sign Up</a>
+                                          <a class="btn btn-sm btn-primary" href="blog.html.erb" role="button">Sign Up</a>
                                         </div>
                                   </form>
                               </div>
@@ -105,7 +105,7 @@
                                         </div>
                                         <div class="navbar-footer-content" align="center">
                                           <input type="reset" class="btn btn btn-sm btn-info" type="reset" value="Reset Button">
-                                          <a class="btn btn-sm btn-primary" href="post-login-blog.html.erb" role="button">Sign In</a>
+                                          <a class="btn btn-sm btn-primary" href="blog.html.erb" role="button">Sign In</a>
                                         </div>
                                   </form>
                               </div>
@@ -135,7 +135,7 @@
       
       <div class="carousel carousel-inner" role="listbox">
         <div class="item active">
-          <%= link_to(image_tag("images/widescreen1a.jpg"), width="100%" class="first-slide"  alt="First slide" root_path) %>
+          <%= image_tag('/images/widescreen1a.jpg') width="100%",  class='first-slide'  alt='First slide' %>
           <div class="container">
             <div class="carousel-caption">
               <h1>Crop Sharing</h1>
@@ -145,7 +145,7 @@
           </div>
         </div>
         <div class="item">
-          <img width="100%" class="second-slide" src="images/widescreen2a.jpg" alt="Second slide">
+          <%= image_tag('/images/widescreen2a.jpg') width="100%", class="second-slide"  alt="Second slide"  %>
           <div class="container">
             <div class="carousel-caption">
               <h1>Crop Sharing</h1>
@@ -155,7 +155,7 @@
           </div>
         </div>
         <div class="item">
-          <img width="100%" class="third-slide" src="images/widescreen3a.jpg" alt="Third slide">
+          <%= image_tag('/images/widescreen3a.jpg') width="100%", class="third-slide"  alt="Third slide"  %>
           <div class="container">
             <div class="carousel-caption">
               <h1>Crop Sharing</h1>
@@ -186,19 +186,19 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4">
-          <img class="img-circle" src="images/user-profile_140x140.png" alt="Generic placeholder image" width="140" height="140">
+          <%= link_to(image_tag('user-profile_140x140.png'),  width='140' height='140'  root_path) %>
           <h2>Barter</h2>
           <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="images/user-profile_140x140.png" alt="Generic placeholder image" width="140" height="140">
+          <%= link_to(image_tag('user-profile_140x140.png'),  width='140' height='140'  root_path) %>
           <h2>Trade</h2>
           <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="images/user-profile_140x140.png" alt="Generic placeholder image" width="140" height="140">
+          <%= link_to(image_tag('user-profile_140x140.png'),  width='140' height='140'  root_path) %>
           <h2>Purchase</h2>
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
@@ -229,7 +229,7 @@
     <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="javascripts/holder.min.js"></script>
+
     
     <script>
     $('.carousel').carousel({

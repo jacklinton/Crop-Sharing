@@ -14,7 +14,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-logo" href="#"> <img src="brand-image-medium.png"></a>
+              <a class="navbar-logo" href="#">
+                <%= image_tag('/images/brand-image-medium.png') %></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
@@ -32,7 +33,7 @@
                           <div class="navbar-content">
                             <div class="row">
                               <div class="col-md-5">
-                                <img src="user-profile_120x120.png" alt="Alternate Text" class="img-responsive" />
+                                <%= image_tag('/images/brand-image-medium.png'), width='120', height='120',  :class => 'img-responsive' %>
                                   <p class="text-center small"><a href="#">Change Photo</a></p>
                               </div>
                               <div class="col-md-7">
@@ -50,7 +51,7 @@
                                     <a href="#" class="btn btn-default btn-sm">Change Passowrd</a>
                                   </div>
                                   <div class="col-md-6">
-                                    <a href="pre-login.html.erb" class="btn btn-default btn-sm pull-right">Sign Out</a>
+                                    <a href="prelogin.html.erb" class="btn btn-default btn-sm pull-right">Sign Out</a>
                                   </div>
                                 </div>
                             </div>
@@ -58,7 +59,7 @@
                        </li>
                     </ul>
                   </li>
-                <li><a href="pre-login.html.erb">Sign Out</a></li>
+                <li><a href="prelogin.html.erb">Sign Out</a></li>
                </ul>
             </div>
           </div>
@@ -209,4 +210,3 @@
 
     <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58c1d62728d5a662"></script>
   </body>
-
