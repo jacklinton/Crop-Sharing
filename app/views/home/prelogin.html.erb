@@ -135,7 +135,7 @@
       
       <div class="carousel carousel-inner" role="listbox">
         <div class="item active">
-          <%= image_tag('/images/widescreen1a.jpg') width="100%",  class='first-slide'  alt='First slide' %>
+          <%= image_tag "images/widescreen1a.jpg", width: =>"100%" :class => 'first-slide' %>
           <div class="container">
             <div class="carousel-caption">
               <h1>Crop Sharing</h1>
@@ -145,7 +145,7 @@
           </div>
         </div>
         <div class="item">
-          <%= image_tag('/images/widescreen2a.jpg') width="100%", class="second-slide"  alt="Second slide"  %>
+          <%= image_tag "images/widescreen2a.jpg", width: =>"100%" :class => 'second-slide' %>
           <div class="container">
             <div class="carousel-caption">
               <h1>Crop Sharing</h1>
@@ -155,7 +155,7 @@
           </div>
         </div>
         <div class="item">
-          <%= image_tag('/images/widescreen3a.jpg') width="100%", class="third-slide"  alt="Third slide"  %>
+          <% image_tag "images/widescreen3a.jpg", width: =>"100%", :class => 'third-slide' %>
           <div class="container">
             <div class="carousel-caption">
               <h1>Crop Sharing</h1>
@@ -222,10 +222,8 @@
     </div><!-- /.container -->
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" %>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

@@ -70,8 +70,7 @@ h6, .h6 {
 .navbar-content
 {
     width: 320px;
-    padding: 15px;
-    padding-bottom:0px;
+  padding: 15px 15px;
 }
 .navbar-content:before, .navbar-content:after
 {
@@ -88,7 +87,7 @@ margin-right: 15px !important;
 }
 .navbar-footer-content { padding:15px 15px 15px 15px; }
 .dropdown-menu {
-padding: 0px;
+padding: 0;
 overflow: hidden;
 }
 
