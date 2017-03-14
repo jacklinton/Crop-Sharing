@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 20170314195018) do
     t.integer  "user_id"
     t.string   "title"
     t.float    "lat"
-    t.float    "lon"
+    t.float    "lng"
     t.string   "category"
     t.boolean  "acc_cash"
     t.boolean  "acc_trade"

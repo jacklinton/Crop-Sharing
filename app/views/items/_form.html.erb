@@ -1,2 +1,6 @@
 <h1>Items#_form</h1>
 <p>Find me in app/views/items/_form.html.erb</p>
+<%= simple_form_for(@item, html: {}) do |f| %>
+    <%= f.input :name, wrapper_html{}, label_html{}, input_html{} %>
+    <%= f.input :description, wrapper_html{}, label_html{}, input_html{} %>
+<% end %>

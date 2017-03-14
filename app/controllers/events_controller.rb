@@ -7,7 +7,8 @@ class EventsController < ApplicationController
   end
 
   def new
-    @listing = Listing.new()
+    @event = Event.new()
+    @items = Item.find_by(event_id: @event.id)
   end
 
   def show
@@ -17,7 +18,7 @@ class EventsController < ApplicationController
   end
   
   def update
-    if @listing.update_attributes(type: event_params[:type],
+    if @event.update_attributes(type: event_params[:type],
               lat: event_params[:lat],
               lng: event_params[:lng],
               name: event_params[:name],
@@ -25,7 +26,7 @@ class EventsController < ApplicationController
               description: event_params[:description],
               date: event_params[:date])
           flash[:notice] = "You have successfully edited your event!"
-          redirect_to listing_path(@listing) 
+          redirect_to listing_path(@event) 
     else
           flash[:alert] = "There was a problem updating your event information, please try again."
           render :edit
