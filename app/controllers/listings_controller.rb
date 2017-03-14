@@ -29,10 +29,6 @@ class ListingsController < ApplicationController
                 picture: listing_params[:picture])
             flash[:notice] = "Successfully updated your listing!"
             redirect_to listing_path(@listing)
-        else
-            flash[:alert] = "The was a problem updating your listing information, please try again."
-            render :edit
-        end
     end
     
     def show
