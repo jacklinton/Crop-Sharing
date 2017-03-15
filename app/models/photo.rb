@@ -1,15 +1,7 @@
-class Listing < ApplicationRecord
-    attr_accessor :address
-    
-    belongs_to :user
-    has_many :pictures
-    
-    
-    geocoded_by :address, latitude: :lat, longitude: :lng   # can also be an IP address
-    after_validation :geocode        # auto-fetch coordinates
-    
-    reverse_geocoded_by :lat, :lng
-    after_validation :reverse_geocode
+class Photo < ApplicationRecord
+    has_one :user
+    belongs_to :event
+    belongs_to :listing
     
     has_attached_file :picture,
     styles: { large: "600x600>", medium: "300x300>", thumb: "100x100>" },
@@ -22,6 +14,5 @@ class Listing < ApplicationRecord
   def s3_credentials
     {:bucket => "railsblogbucket", :access_key_id => ENV["AWS_ACCESS_KEY_ID"], :secret_access_key => ENV["AWS_SECRET_ACCESS_KEY"]}
   end
-  
-  
+    
 end
