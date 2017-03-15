@@ -1,0 +1,5 @@
+$(document).ready( function(){
+    $("#new_item").ajaxSuccess( function(){
+        $("#items").append("<p><%=@item.name%></p> <p><%=@item.description%></p>")
+    })
+})

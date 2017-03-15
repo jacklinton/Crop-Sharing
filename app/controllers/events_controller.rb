@@ -8,6 +8,7 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new()
+    @item = Item.new()
     @items = Item.find_by(event_id: @event.id)
   end
 
@@ -19,6 +20,7 @@ class EventsController < ApplicationController
   
   def update
     if @event.update_attributes(event_type: event_params[:event_type],
+              address: event_params[:address],
               lat: event_params[:lat],
               lng: event_params[:lng],
               name: event_params[:name],
@@ -37,6 +39,7 @@ class EventsController < ApplicationController
     @user = current_user
     @event = Event.new
     @event.update_attributes(user_id: @user.id,
+            address: event_params[:address],
             event_type: event_params[:event_type],
             lat: event_params[:lat],
             lng: event_params[:lng],
@@ -65,5 +68,5 @@ def set_event
 end
 
 def event_params
-    params.require(:event).permit(:event_type, :lat, :lng, :name, :description, :date, :photo, :address)
+    params.require(:event).permit(:event_type, :lat, :lng, :name, :description, :date, :photo, :address, :private_event)
 end

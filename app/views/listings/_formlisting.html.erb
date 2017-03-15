@@ -1,6 +1,6 @@
 <%= simple_form_for(@listing, html: {  }) do |f| %>
     <%= f.input :title, required:true, wrapper_html:{ class: "form-group" }, label_html: {class: "col-2 col-form-label"}, input_html: { class: "form-control" } %>
-    <%= f.input :address, required:true, wrapper_html:{ class: "form-group" }, label_html: {class: "col-2 col-form-label"}, input_html: { class: "form-control" } %>
+    <%= f.input :address, required:true, wrapper_html:{ class: "form-group" }, label_html: {class: "col-2 col-form-label"}, input_html: { class: "form-control address" } %>
     <%= f.input :category, wrapper_html: { class: "form-group" }, label_html: {class: "col-2 col-form-label"}, input_html: {class: "form-control"} %>
     <%= f.input :acc_cash, wrapper_html: { class: "form-check form-check-inline" }, label_html: {}, input_html: {} %>
     <%= f.input :acc_trade, wrapper_html: { class: "form-check form-check-inline" }, label_html: {}, input_html: {} %>
