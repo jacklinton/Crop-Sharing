@@ -1,0 +1,5 @@
+<h1>Pictures#_form</h1>
+<p>Find me in app/views/pictures/_form.html.erb</p>
+<%= simple_form_for(@picture, html: {}) do f %>
+    <%= f.input :photo, as: :file, wrapper_html{}, label_html{}, input_html{} %>
+<% end %>

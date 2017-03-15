@@ -1,0 +1,26 @@
+
+<h1>Title: <%= @listing.title %></h1>
+<br>
+<br>
+<p>Created by: <%= @listing.user_id %></p>
+<br>
+<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?center=#{@listing.lat},#{@listing.lng}&markers=#{@listing.lat},#{@listing.lng}&zoom=15&size=640x400",
+              class: 'img-fluid img-rounded', alt: "#{@listing.title} on the map"%>
+<br>
+<p><%= @listing.address %></p>
+<p>Category: <%= @listing.category %></p>
+<br>
+<p>Description: <%= @listing.description %></p>
+<br>
+<p>Wants: <%= @listing.wants %></p>
+<br>
+<p>Quantity: <%= @listing.quantity %></p>
+<br>
+<p>Harvest Date: <%= @listing.harvest_date %></p>
+<br>
+<p>Listing Expiration: <%= @listing.exp_date %></p>
+<br>
+<p><%= image_tag @listing.picture %> </p>
+
+<%= button_to "Edit Listing", edit_listing_path(@listing), method: :get, html: { class: "btn btn-primary" } %>
+<%= button_to "Delete Listing", listing_path(@listing), method: :delete, html: { class: "btn btn-primary" } %>

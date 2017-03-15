@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'home/index'
   resources :contacts, only: [:new, :create]
 
@@ -6,4 +7,11 @@ Rails.application.routes.draw do
 
   root "home#index"
   
+
+    resources :listings
+    resources :pictures
+    resources :items
+    resources :invites
+    resources :events
+
 end

@@ -10,10 +10,86 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20170311195828) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+
+  create_table "events", force: :cascade do |t|
+    t.string   "event_type"
+    t.string   "name"
+    t.date     "date"
+    t.float    "lat"
+    t.float    "lng"
+    t.text     "description"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.boolean  "private_event"
+    t.string   "address"
+    t.integer  "user_id"
+  end
+
+  create_table "invites", force: :cascade do |t|
+    t.integer  "event_id"
+    t.integer  "user_to"
+    t.integer  "user_from"
+    t.boolean  "accepted"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "event_id"
+    t.boolean  "bring"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "user_id"
+  end
+
+  create_table "listings", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "title"
+    t.float    "lat"
+    t.float    "lng"
+    t.string   "category"
+    t.boolean  "acc_cash"
+    t.boolean  "acc_trade"
+    t.text     "description"
+    t.text     "wants"
+    t.string   "quantity"
+    t.date     "harvest_date"
+    t.date     "exp_date"
+    t.boolean  "complete"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
+    t.string   "address"
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.integer  "event_id"
+    t.integer  "user_id"
+    t.integer  "listing_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "file_file_name"
+    t.string   "file_content_type"
+    t.integer  "file_file_size"
+    t.datetime "file_updated_at"
+  end
+
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -28,6 +104,9 @@ ActiveRecord::Schema.define(version: 20170311195828) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.float    "lat"
+    t.float    "lng"
+
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end

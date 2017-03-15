@@ -11,10 +11,8 @@ gem 'rails', '~> 5.0.2'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 gem 'omniauth'
-gem 'devise'
-gem 'simple_form'
 gem 'omniauth-facebook', '1.4.0'
-gem 'bootstrap-sass'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 gem 'mail_form'
@@ -36,7 +34,21 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+
+gem 'bcrypt', '~> 3.1.7'
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
+gem 'paperclip'
+gem 'aws-sdk'
+gem 'ckeditor'
+gem 'devise'
+gem 'faker'
+gem 'figaro'
+gem 'simple_form'
+gem 'geocoder'
+gem 'gmaps4rails'
+gem 'geokit-rails'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -54,6 +66,11 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
+
+group :production do
+
+end
+
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
