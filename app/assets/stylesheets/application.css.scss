@@ -15,5 +15,29 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ * {
+ 	box-sizing: border-box;
+ }
+
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+.wrapper {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.skinny_wrapper {
+	width: 80%;
+	max-width: 760px;
+	margin: 0 auto;
+}
+
+.wrapper_padding {
+	padding: 4rem 0;
+}
+
+
 
 
