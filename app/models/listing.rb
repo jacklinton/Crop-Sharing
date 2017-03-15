@@ -1,5 +1,20 @@
 class Listing < ApplicationRecord
+    attr_accessor :address
+    
     belongs_to :user
+    has_many :pictures
+    
+    def address
+        address = @listing.address
+        return address
+    end
+    
+    geocoded_by :address, latitude: :lat, longitude: :lng   # can also be an IP address
+    after_validation :geocode, if: ->(obj){ obj.address.present? and obj.address_changed? }          # auto-fetch coordinates
+    
+    reverse_geocoded_by :lat, :lng
+    after_validation :reverse_geocode, unless: ->(obj) { obj.address.present? },
+                 if: ->(obj){ obj.lat.present? and obj.lat_changed? and obj.lng.present? and obj.lng_changed? }# auto-fetch address
     
     has_attached_file :picture,
     styles: { large: "600x600>", medium: "300x300>", thumb: "100x100>" },
@@ -12,4 +27,6 @@ class Listing < ApplicationRecord
   def s3_credentials
     {:bucket => "railsblogbucket", :access_key_id => ENV["AWS_ACCESS_KEY_ID"], :secret_access_key => ENV["AWS_SECRET_ACCESS_KEY"]}
   end
+  
+  
 end

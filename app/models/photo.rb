@@ -1,5 +1,5 @@
 class Photo < ApplicationRecord
-    belongs_to :user
+    has_one :user
     belongs_to :event
     belongs_to :listing
     

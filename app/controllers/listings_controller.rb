@@ -16,8 +16,9 @@ class ListingsController < ApplicationController
     
     def update
         if @listing.update_attributes(title: listing_params[:title],
+                address: listing_params[:address],
                 lat: listing_params[:lat],
-                lon: listing_params[:lon],
+                lng: listing_params[:lng],
                 category: listing_params[:category],
                 acc_cash: listing_params[:acc_cash],
                 acc_trade: listing_params[:acc_trade],
@@ -29,6 +30,10 @@ class ListingsController < ApplicationController
                 picture: listing_params[:picture])
             flash[:notice] = "Successfully updated your listing!"
             redirect_to listing_path(@listing)
+        else
+          flash[:alert] = "There was a problem updating your listing information, please try again."
+          render :edit
+        end
     end
     
     def show
@@ -40,8 +45,9 @@ class ListingsController < ApplicationController
         @listing = Listing.new
         @listing.update_attributes(user_id: @user.id,
                 title: listing_params[:title],
+                address: listing_params[:address],
                 lat: listing_params[:lat],
-                lon: listing_params[:lon],
+                lng: listing_params[:lng],
                 category: listing_params[:category],
                 acc_cash: listing_params[:acc_cash],
                 acc_trade: listing_params[:acc_trade],
@@ -72,5 +78,5 @@ def set_listing
 end
 
 def listing_params
-    params.require(:listing).permit(:title, :lat, :lon, :category, :acc_cash, :acc_trade, :description, :wants, :quantity, :harvest_date, :exp_date, :picture)
+    params.require(:listing).permit(:title, :address, :lat, :lng, :category, :acc_cash, :acc_trade, :description, :wants, :quantity, :harvest_date, :exp_date, :picture)
 end
