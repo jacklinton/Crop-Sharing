@@ -1,2 +1,31 @@
 <h1>Events#index</h1>
 <p>Find me in app/views/events/index.html.erb</p>
+<div>     
+    <h1>Listings Table</h1>    
+        <table id="listings" class="display responsive no-wrap table table-striped" classspacing="0" width="100%">
+            <thead class="thead-default">
+                <tr>
+                    <th>Picture</th>
+                    <th>Name</th>
+                    <th>Distance</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @events.each do |l| %>
+                    <tr>
+                        <td><%= image_tag l.photo:thumb %></td>
+                        <td><%= l.name %></td>
+                        <td>distance</td>
+                        <td><%= l.event_type %></td>
+                        <td><%= l.description %></td>
+                        <td><%= l.date %></td>
+                        <td><%= link_to "Read more", event_path(l) %></td>
+                    </tr>
+                <% end %>
+                </tbody>
+        </table>
+</div>  
