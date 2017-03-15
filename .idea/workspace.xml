@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="34073ba8-1603-4f67-9519-1e0c2e967f26" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/carousel.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/carousel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/styles.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/styles.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -30,18 +29,18 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1620">
-              <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+            <state relative-caret-position="285">
+              <caret line="41" column="70" lean-forward="false" selection-start-line="41" selection-start-column="70" selection-end-line="41" selection-end-column="70" />
               <folding>
-                <element signature="e#3580#3587#0#HTML" expanded="true" />
-                <element signature="e#4092#4099#0#HTML" expanded="true" />
-                <element signature="e#4632#4639#0#HTML" expanded="true" />
-                <element signature="e#4936#4942#0#HTML" expanded="true" />
-                <element signature="e#4978#4986#0#HTML" expanded="true" />
-                <element signature="e#5011#5019#0#HTML" expanded="true" />
+                <element signature="e#3586#3593#0#HTML" expanded="true" />
+                <element signature="e#4098#4105#0#HTML" expanded="true" />
+                <element signature="e#4638#4645#0#HTML" expanded="true" />
+                <element signature="e#4942#4948#0#HTML" expanded="true" />
+                <element signature="e#4984#4992#0#HTML" expanded="true" />
+                <element signature="e#5017#5025#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -59,23 +58,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="holder.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/holder.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="application.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="201">
               <caret line="63" column="70" lean-forward="false" selection-start-line="63" selection-start-column="70" selection-end-line="63" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/styles.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="573">
+              <caret line="380" column="1" lean-forward="false" selection-start-line="380" selection-start-column="1" selection-end-line="380" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -170,11 +167,11 @@
         <option value="$PROJECT_DIR$/app/views/home/prelogin.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/home/blog.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/styles.scss" />
-        <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/carousel.js" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/styles.scss" />
+        <option value="$PROJECT_DIR$/app/views/home/index.html.erb" />
       </list>
     </option>
   </component>
@@ -612,7 +609,7 @@
       <option name="presentableId" value="Default" />
       <updated>1489373846822</updated>
       <workItem from="1489373849947" duration="1806000" />
-      <workItem from="1489419312367" duration="47455000" />
+      <workItem from="1489419312367" duration="47675000" />
     </task>
     <servers />
   </component>
@@ -622,7 +619,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49261000" />
+    <option name="totallyTimeSpent" value="49481000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="468" y="23" width="1560" height="1051" extended-state="0" />
@@ -630,8 +627,8 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21410257" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35019842" sideWeight="0.25897437" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection Results" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35019842" sideWeight="0.7410256" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35019842" sideWeight="0.25897437" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35019842" sideWeight="0.7410256" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297975" sideWeight="0.49289098" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -665,12 +662,12 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#3580#3587#0#HTML" expanded="true" />
-            <element signature="e#4092#4099#0#HTML" expanded="true" />
-            <element signature="e#4632#4639#0#HTML" expanded="true" />
-            <element signature="e#4936#4942#0#HTML" expanded="true" />
-            <element signature="e#4978#4986#0#HTML" expanded="true" />
-            <element signature="e#5011#5019#0#HTML" expanded="true" />
+            <element signature="e#3586#3593#0#HTML" expanded="true" />
+            <element signature="e#4098#4105#0#HTML" expanded="true" />
+            <element signature="e#4638#4645#0#HTML" expanded="true" />
+            <element signature="e#4942#4948#0#HTML" expanded="true" />
+            <element signature="e#4984#4992#0#HTML" expanded="true" />
+            <element signature="e#5017#5025#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -899,14 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/styles.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1863">
-          <caret line="362" column="1" lean-forward="false" selection-start-line="362" selection-start-column="1" selection-end-line="362" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/holder.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -959,21 +948,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
-          <folding>
-            <element signature="e#3580#3587#0#HTML" expanded="true" />
-            <element signature="e#4092#4099#0#HTML" expanded="true" />
-            <element signature="e#4632#4639#0#HTML" expanded="true" />
-            <element signature="e#4936#4942#0#HTML" expanded="true" />
-            <element signature="e#4978#4986#0#HTML" expanded="true" />
-            <element signature="e#5011#5019#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/blog.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -997,6 +971,29 @@
         <state relative-caret-position="201">
           <caret line="63" column="70" lean-forward="false" selection-start-line="63" selection-start-column="70" selection-end-line="63" selection-end-column="70" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/styles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="380" column="1" lean-forward="false" selection-start-line="380" selection-start-column="1" selection-end-line="380" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="41" column="70" lean-forward="false" selection-start-line="41" selection-start-column="70" selection-end-line="41" selection-end-column="70" />
+          <folding>
+            <element signature="e#3586#3593#0#HTML" expanded="true" />
+            <element signature="e#4098#4105#0#HTML" expanded="true" />
+            <element signature="e#4638#4645#0#HTML" expanded="true" />
+            <element signature="e#4942#4948#0#HTML" expanded="true" />
+            <element signature="e#4984#4992#0#HTML" expanded="true" />
+            <element signature="e#5017#5025#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
