@@ -18,7 +18,7 @@ class EventsController < ApplicationController
   end
   
   def update
-    if @event.update_attributes(type: event_params[:type],
+    if @event.update_attributes(event_type: event_params[:event_type],
               lat: event_params[:lat],
               lng: event_params[:lng],
               name: event_params[:name],
@@ -37,7 +37,7 @@ class EventsController < ApplicationController
     @user = current_user
     @event = Event.new
     @event.update_attributes(user_id: @user.id,
-            type: event_params[:type],
+            event_type: event_params[:event_type],
             lat: event_params[:lat],
             lng: event_params[:lng],
             name: event_params[:name],
@@ -65,5 +65,5 @@ def set_event
 end
 
 def event_params
-    params.require(:event).permit(:type, :lat, :lng, :name, :description, :date)
+    params.require(:event).permit(:event_type, :lat, :lng, :name, :description, :date, :photo, :address)
 end

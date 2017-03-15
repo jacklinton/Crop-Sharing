@@ -7,4 +7,5 @@ class User < ApplicationRecord
    has_many :invites
    has_many :items
    has_many :listings
+   has_many :events
 end
