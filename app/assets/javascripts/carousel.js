@@ -5,5 +5,5 @@
 
 $('.carousel').carousel({
     interval: 1000, //changes the speed
-    pause: 'true'
-})
+    pause: 'true',
+});;
