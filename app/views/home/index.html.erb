@@ -38,7 +38,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-               <a class="navbar-logo" href="#"><%= image_tag "images/brand-image-medium.png" %></a>
+               <a class="navbar-logo" href="#"><%= image_tag("images/brand-image-medium.png") %></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
@@ -136,7 +136,7 @@
       
       <div class="carousel carousel-inner" role="listbox">
         <div class="item active">
-          <%= image_tag 'images/widescreen1a.jpg', width: => '100%', class: 'first-slide' %>
+          <%= image_tag("/images/widescreen1a.jpg", width:'100%', class:'first-slide') %>
           <div class="container">
             <div class="carousel-caption">
               <h1>Crop Sharing</h1>
@@ -146,7 +146,7 @@
           </div>
         </div>
         <div class="item">
-          <%= image_tag 'images/widescreen2a.jpg', width: => '100%', class: 'second-slide' %>
+          <%= image_tag("/images/widescreen2a.jpg", width:'100%', class:'second-slide') %>
           <div class="container">
             <div class="carousel-caption">
               <h1>Crop Sharing</h1>
@@ -156,7 +156,7 @@
           </div>
         </div>
         <div class="item">
-          <%= image_tag 'images/widescreen3a.jpg', width: => '100%', class: 'third-slide' %>
+          <%= image_tag('/image/widescreen3a.jpg', width:'100%', class: 'third-slide') %>
           <div class="container">
             <div class="carousel-caption">
               <h1>Crop Sharing</h1>
@@ -175,26 +175,25 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
-    
-    
+
     <div class="container marketing">
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4">
-          <%= image_tag 'user-profile_140x140.png', size: '140x140' %>
+          <%= image_tag('user-profile_140x140.png', size: '140x140') %>
           <h2>Barter</h2>
           <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <%= image_tag 'user-profile_140x140.png', size: '140x140' %>
+          <%= image_tag('user-profile_140x140.png', size: '140x140') %>
           <h2>Trade</h2>
           <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <%= image_tag 'user-profile_140x140.png', size: '140x140' %>
+          <%= image_tag('user-profile_140x140.png', size: '140x140') %>
           <h2>Purchase</h2>
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
@@ -219,10 +218,10 @@
 
 
 
-    <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js' %>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+    <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" %>
+    <script>window.jQuery || document.write(<script src="js/vendor/jquery.min.js"><\/script>)</script>
 
-        <%= javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' %>
+        <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" %>
 
     
     <script>
