@@ -1,5 +1,4 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+
 
     <style>
         h1 {
@@ -21,111 +20,17 @@
               text-shadow: 1px 1px 1px #000; 
             }
 
+          carousel {
+            margin-top: 5px;
+            }
+
+
     </style>
   
 
   <body>
-    <!-- NAVBAR ================================================== -->
-    <div class="navbar-wrapper">
-      <div class="container">
+  <!-- Carousel ================================================== -->
 
-        <nav class="navbar navbar-inverse navbar-static-top">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-               <a class="navbar-logo" href="#"><%= image_tag("images/brand-image-medium.png") %></a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Help</a></li>
-              </ul>
-              
-              <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sign Up<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                       <li>
-                          <div class="navbar-content">
-                            <div class="row">
-                              <div class="col-md-12">
-                                  <form class="form-signup">
-                                        <h3>Sign Up</h3>
-                                        <label for="inputEmail" class="sr-only">User Name</label>
-                                        <input type="text" id="inputName" class="form-control" placeholder="User Name" required autofocus>
-                                    
-                                        <label for="inputEmail" class="sr-only">Email address</label>
-                                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                                    
-                                        <label for="inputPassword" class="sr-only">Create a Password</label>
-                                        <input type="password" id="inputPassword" class="form-control" placeholder="Create a Password" required>
-                                    
-                                        <label for="inputPassword" class="sr-only">Confirm your Password</label>
-                                        <input type="password" id="inputPassword" class="form-control" placeholder="Confirm Your Password" required>
-                                    
-                                        <div class="checkbox">
-                                          <label><input type="checkbox" value="remember-me"> Remember me</label>
-                                        </div>
-                                        <div class="navbar-footer-content" align="center">
-                                          <input type="reset" class="btn btn btn-sm btn-info" type="reset" value="Reset Button">
-                                          <a class="btn btn-sm btn-primary" href="blog.html.erb" role="button">Sign Up</a>
-                                        </div>
-                                  </form>
-                              </div>
-                             </div>
-                          </div>
-                       </li>
-                    </ul>
-                  </li>
-                
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sign In<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                       <li>
-                          <div class="navbar-content">
-                            <div class="row">
-                              <div class="col-md-12">
-                                  <form class="form-signin">
-                                        <h3>Sign In</h3>
-                                        <label for="inputEmail" class="sr-only">Email address</label>
-                                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                                        <label for="inputPassword" class="sr-only">Password</label>
-                                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                                        <div class="checkbox">
-                                          <label>
-                                            <input type="checkbox" value="remember-me"> Remember me
-                                          </label>
-                                        </div>
-                                        <div class="navbar-footer-content" align="center">
-                                          <input type="reset" class="btn btn btn-sm btn-info" type="reset" value="Reset Button">
-                                          <a class="btn btn-sm btn-primary" href="blog.html.erb" role="button">Sign In</a>
-                                        </div>
-                                  </form>
-                              </div>
-                             </div>
-                          </div>
-                       </li>
-                    </ul>
-                  </li>
-                
-               </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </div>
-
-
-    <!-- Carousel
-    ================================================== -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -156,7 +61,7 @@
           </div>
         </div>
         <div class="item">
-          <%= image_tag('/image/widescreen3a.jpg', width:'100%', class: 'third-slide') %>
+          <%= image_tag("/images/widescreen3a.jpg", width:'100%', class: 'third-slide') %>
           <div class="container">
             <div class="carousel-caption">
               <h1>Crop Sharing</h1>
@@ -175,25 +80,28 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
+    <div class="text-center">
+      <h2>Be a Localvore - live locally!</h2>
+    </div>
 
     <div class="container marketing">
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4">
-          <%= image_tag('user-profile_140x140.png', size: '140x140') %>
+          <%= image_tag('user-profile_140x140.png', size: '140x140', class: 'img-circle') %>
           <h2>Barter</h2>
           <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <%= image_tag('user-profile_140x140.png', size: '140x140') %>
+          <%= image_tag('user-profile_140x140.png', size: '140x140', class: 'img-circle') %>
           <h2>Trade</h2>
           <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <%= image_tag('user-profile_140x140.png', size: '140x140') %>
+          <%= image_tag('user-profile_140x140.png', size: '140x140',  class: 'img-circle') %>
           <h2>Purchase</h2>
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
@@ -216,20 +124,11 @@
 
     </div><!-- /.container -->
 
-
-
     <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" %>
-    <script>window.jQuery || document.write(<script src="js/vendor/jquery.min.js"><\/script>)</script>
 
-        <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" %>
+    <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" %>
 
-    
-    <script>
-    $('.carousel').carousel({
-        interval: 1000, //changes the speed
-         pause: 'true'
-        })
-    </script>
+
     
   </body>
 

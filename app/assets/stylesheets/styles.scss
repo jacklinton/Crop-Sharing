@@ -49,7 +49,7 @@ h6, .h6 {
   right: 0;
   left: 0;
   z-index: 20;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 /* Flip around the padding for proper display in narrow viewports */
@@ -103,6 +103,7 @@ overflow: hidden;
   width: 100%;
   height: auto;
   margin-bottom: 60px;
+
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -112,6 +113,7 @@ overflow: hidden;
 /* Declare heights because of positioning of img element */
 .carousel .item {
   height: 650px;
+  margin-top: 5px;
   background-color: #fff;
   background-size: cover;
 }
@@ -329,7 +331,7 @@ overflow: hidden;
 @media (min-width: 768px) {
   /* Navbar positioning foo */
   .navbar-wrapper {
-    margin-top: 20px;
+    margin-top: 5px;
   }
   .navbar-wrapper .container {
     padding-right: 15px;
@@ -362,3 +364,4 @@ overflow: hidden;
     margin-top: 120px;
   }
 }
+
