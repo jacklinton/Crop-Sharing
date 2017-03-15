@@ -2,13 +2,82 @@
 <html>
   <head>
     <title>Crop Sharing</title>
-    <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= csrf_meta_tags %>
   </head>
 
-  <body>
-    <%= yield %>
+  <<body>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <!-- NAVBAR ================================================== -->
+  <div class="navbar-wrapper">
+    <div class="container">
+
+      <nav class="navbar navbar-inverse navbar-fixed-top navbar-color">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-logo" href="#"><%= image_tag 'images/brand-image-medium.png' %></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href='index'>Home</a></li>
+              <li class="active"><a href="'blog">Blog</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Help</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Profile &nbsp;<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <div class="navbar-content">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <%= image_tag '/images/user-profile_120x120.png', size: '120x120', class: 'img-responsive' %>
+                          <p class="text-center small"><a href="#">Change Photo</a></p>
+                        </div>
+                        <div class="col-md-7">
+                          <span>User Name</span>
+                          <p class="text-muted small">username@gmail.com</p>
+                          <div class="divider"></div>
+                          <a href="#" class="btn btn-primary btn-sm active">View Profile</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="navbar-footer">
+                      <div class="navbar-footer-content">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <a href="#" class="btn btn-default btn-sm">Change Passowrd</a>
+                          </div>
+                          <div class="col-md-6">
+                            <a href="#" class="btn btn-default btn-sm pull-right">Sign Out</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="#">Sign Out</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <%= yield %>
+
   </body>
 </html>

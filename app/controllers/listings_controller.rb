@@ -1,8 +1,8 @@
 class ListingsController < ApplicationController
-    before_action :authenticate_user!, except: [:index]
+    before_action :authenticate_user!, except: [:ListingTable]
     before_action :set_listing, only: [:update, :show, :edit]
     
-    def index
+    def ListingTable
         @listings = Listing.all
     end
     
