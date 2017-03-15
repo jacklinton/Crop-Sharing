@@ -41,6 +41,8 @@ gem 'devise'
 gem 'faker'
 gem 'figaro'
 gem 'simple_form'
+gem 'geocoder'
+gem 'gmaps4rails'
 gem 'geokit-rails'
 
 
