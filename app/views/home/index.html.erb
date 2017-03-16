@@ -25,7 +25,7 @@
     <script>
       $(document).ready(function(){
         $('.carousel').carousel({
-            interval: 3000,
+            interval: 5000,
             pause: "true"
         })
       })
@@ -35,15 +35,15 @@
   <body>
 
 
-  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-  </ol>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
 
-    <div class="carousel-inner carousel-fade" role="listbox">
+    <div class="carousel carousel-inner carousel-fade" role="listbox">
         <div class="item active">
           <%= image_tag('/images/widescreen1a.jpg', width:'100%', class:'first-slide') %>
           <div class="container">
@@ -86,7 +86,7 @@
     </div>
 
     <div class="text-center">
-      <h2>Be a Localvore - live locally!</h2>
+      <h2>Be a Localvore - eat & live locally!</h2>
     </div>
 
     <div class="container marketing">
@@ -131,7 +131,7 @@
 
     </div><!-- /.container -->
 
-    <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" %>
+    <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js' %>
 
     <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" %>
 

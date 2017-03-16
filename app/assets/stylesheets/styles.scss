@@ -49,7 +49,7 @@ h6, .h6 {
   right: 0;
   left: 0;
   z-index: 20;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 /* Flip around the padding for proper display in narrow viewports */
@@ -67,11 +67,14 @@ h6, .h6 {
 
 
 /* Flip around the padding for proper display in narrow viewports */
-.navbar-content {
-  width: 320px;
-  padding: 15px 15px;
+.navbar-content
+{
+    width: 320px;
+    padding: 15px;
+    padding-bottom:0px;
 }
-.navbar-content:before, .navbar-content:after {
+.navbar-content:before, .navbar-content:after
+{
     display: table;
     content: "";
     line-height: 0;
@@ -79,29 +82,23 @@ h6, .h6 {
 .navbar-nav.navbar-right:last-child {
 margin-right: 15px !important;
 }
-.navbar-footer
+.navbar-footer 
 {
     background-color:#DDD;
 }
 .navbar-footer-content { padding:15px 15px 15px 15px; }
 .dropdown-menu {
-padding: 0;
+padding: 0px;
 overflow: hidden;
 }
 
 
-
-
-
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
 
 /* Carousel base class */
 .carousel {
   width: 100%;
   height: auto;
   margin-bottom: 60px;
-
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -119,60 +116,33 @@ overflow: hidden;
   top: 0;
   left: 0;
   background-size: cover;
-
+  
 }
-
-
-
-
 
 /* Fade transition for carousel items */
 .carousel .item {
-              transition-property: opacity;
-                -webkit-transition: opacity 3.0s; /*adjust timing here */
-                   -moz-transition: opacity 3.0s;
-                     -o-transition: opacity 3.0s;
-                        transition: opacity 3.0s;
-
-
+    left: 0 !important;
+      -webkit-transition: opacity .4s; /*adjust timing here */
+         -moz-transition: opacity .4s;
+           -o-transition: opacity .4s;
+              transition: opacity .4s;
 }
 .carousel-control {
-              background-image: none !important; /* remove background gradients on controls */
-          }
-
+    background-image: none !important; /* remove background gradients on controls */
+}
 /* Fade controls with items */
 .next.left,
 .prev.right {
-              opacity: 1;
-              z-index: 1;
-          }
+    opacity: 1;
+    z-index: 1;
+}
 .active.left,
 .active.right {
-              opacity: 0;
-              z-index: 2;
-          }
-
-/* Carousel Fading slide */
-.carousel-fade .carousel-inner { background: #000; }
-.carousel-fade .carousel-control { z-index: 2; }  
-.carousel-fade .item {
-  opacity: 0.5;
-  -webkit-transition-property: opacity;
-  -moz-transition-property: opacity;
-  -o-transition-property: opacity;
-  transition-property: opacity;
-  }
-
-  .carousel-fade .next.left,
-  .carousel-fade .prev.right,
-  .carousel-fade .item.active { opacity: 1; }
-
-  .carousel-fade .active.left,
-  .carousel-fade .active.right {
-    left: 0;
     opacity: 0;
-    z-index: 1;
-    }
+    z-index: 2;
+}
+
+
 
 /*
  * Masthead for nav
@@ -352,7 +322,7 @@ overflow: hidden;
 @media (min-width: 768px) {
   /* Navbar positioning foo */
   .navbar-wrapper {
-    margin-top: 5px;
+    margin-top: 20px;
   }
   .navbar-wrapper .container {
     padding-right: 15px;
