@@ -20,26 +20,30 @@
               text-shadow: 1px 1px 1px #000; 
             }
 
-          .carousel {
-            margin-top: 5px;
-            }
-
-
     </style>
+
+    <script>
+      $(document).ready(function(){
+        $('.carousel').carousel({
+            interval: 3000,
+            pause: "true"
+        })
+      })
+    </script>
   
 
   <body>
-  <!-- Carousel ================================================== -->
 
-  <div class="carousel carousel-inner" role="listbox">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
 
-    <div class="carousel carousel-inner" role="listbox">
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+    <div class="carousel-inner carousel-fade" role="listbox">
         <div class="item active">
           <%= image_tag('/images/widescreen1a.jpg', width:'100%', class:'first-slide') %>
           <div class="container">
@@ -51,7 +55,7 @@
           </div>
         </div>
         <div class="item">
-          <%= image_tag("/images/widescreen2a.jpg", width:'100%', class:'second-slide') %>
+          <%= image_tag('/images/widescreen2a.jpg', width:'100%', class:'second-slide') %>
           <div class="container">
             <div class="carousel-caption">
               <h1>Crop Sharing</h1>
@@ -61,7 +65,7 @@
           </div>
         </div>
         <div class="item">
-          <%= image_tag("/images/widescreen3a.jpg", width:'100%', class: 'third-slide') %>
+          <%= image_tag('/images/widescreen3a.jpg', width:'100%', class: 'third-slide') %>
           <div class="container">
             <div class="carousel-caption">
               <h1>Crop Sharing</h1>
@@ -114,6 +118,8 @@
 
       <hr class="featurette-divider">
 
+
+
       <!-- /END THE FEATURETTES -->
 
 
@@ -128,6 +134,8 @@
     <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" %>
 
     <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" %>
+
+
 
 
 

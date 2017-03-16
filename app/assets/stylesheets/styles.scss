@@ -122,13 +122,17 @@ overflow: hidden;
 
 }
 
+
+
+
+
 /* Fade transition for carousel items */
 .carousel .item {
               transition-property: opacity;
-                -webkit-transition: opacity 1.0s; /*adjust timing here */
-                   -moz-transition: opacity 1.0s;
-                     -o-transition: opacity 1.0s;
-                        transition: opacity 1.0s;
+                -webkit-transition: opacity 3.0s; /*adjust timing here */
+                   -moz-transition: opacity 3.0s;
+                     -o-transition: opacity 3.0s;
+                        transition: opacity 3.0s;
 
 
 }
@@ -148,7 +152,27 @@ overflow: hidden;
               z-index: 2;
           }
 
+/* Carousel Fading slide */
+.carousel-fade .carousel-inner { background: #000; }
+.carousel-fade .carousel-control { z-index: 2; }  
+.carousel-fade .item {
+  opacity: 0.5;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  }
 
+  .carousel-fade .next.left,
+  .carousel-fade .prev.right,
+  .carousel-fade .item.active { opacity: 1; }
+
+  .carousel-fade .active.left,
+  .carousel-fade .active.right {
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+    }
 
 /*
  * Masthead for nav
