@@ -13,104 +13,141 @@
 
   <!-- NAVBAR ================================================== -->
   <div class="navbar-wrapper">
-    <div class="container">
+      <div class="container">
 
-      <nav class="navbar navbar-inverse navbar-fixed-top navbar-color">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-logo" href="#" title="Home"><%= image_tag('/images/brand-image-medium.png') %></a>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="#"></a></li>
-              <li><a href="#blog">Blog</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Help</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li class="dropdown active">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sign Up<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <div class="navbar-content">
-                      <div class="row">
-                        <div class="col-md-12">
-                          <form class="form-signup">
-                            <h3>Sign Up</h3>
-                            <label for="inputEmail" class="sr-only">User Name</label>
-                            <input type="text" id="inputName" class="form-control" placeholder="User Name" required autofocus>
-
-                            <label for="inputEmail" class="sr-only">Email address</label>
-                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-
-                            <label for="inputPassword" class="sr-only">Create a Password</label>
-                            <input type="password" id="inputPassword" class="form-control" placeholder="Create a Password" required>
-
-                            <label for="inputPassword" class="sr-only">Confirm your Password</label>
-                            <input type="password" id="inputPassword" class="form-control" placeholder="Confirm Your Password" required>
-
-                            <div class="checkbox">
-                              <label><input type="checkbox" value="remember-me"> Remember me</label>
-                            </div>
-                            <div class="navbar-footer-content" align="center">
-                              <input type="reset" class="btn btn btn-sm btn-info" value="Reset Button">
-                              <a class="btn btn-sm btn-primary" href="#blog" role="button">Sign Up</a>
-                            </div>
-                          </form>
-                        </div>
-                      </div>
-                    </div>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+               <a class="navbar-logo" href="#"> <img src="images/brand-image-medium.png"></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#help">Help</a></li>
+              </ul>
+              
+              <ul class="nav navbar-nav navbar-right">
+                
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sign Up<b class="caret"></b></a>
+                    <ul id="signup-dp" class="dropdown-menu">
+                       <li>
+                          
+                            <div class="row">
+                              <div class="col-md-12">
+                                  Sign Up via
+                                  <div class="social-buttons">
+                                      <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+                                        </div>
+                                      <form class="form" role="form" method="post" action="signup" accept-charset="UTF-8" id="signup-nav">
+                                        <div><hr></div>
+                                        Sign Up via Email<br>
+                                        <div class="form-group">
+                                          <label for="inputName1" class="sr-only">First  Name</label>
+                                          <input type="text" id="inputName1" class="form-control" placeholder="First Name" required autofocus>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                          <label for="inputName2" class="sr-only">Last Name</label>
+                                          <input type="text" id="inputName2" class="form-control" placeholder="Last Name" required autofocus>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                          <label class="sr-only" for="InputAddress1">Address-1</label>
+                                          <input type="text" class="form-control" id="InputAddress" placeholder="Address-1" required>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                          <label class="sr-only" for="InputAddress2">Address-2</label>
+                                          <input type="text" class="form-control" id="InputAddress2" placeholder="Address-2" required>
+                                        </div>
+                                    
+                                        <div class="form-group">
+                                          <label class="sr-only" for="exampleInputEmail">Email address</label>
+                                          <input type="email" class="form-control" id="exampleInputEmail" placeholder="Email address" required>
+                                        </div>
+                                      
+                                        <div class="form-group">
+                                          <label class="sr-only" for="exampleInputPassword2"> Password</label>
+                                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Create a Password" required>
+                                        </div>
+                                    
+                                        <div class="form-group">
+                                          <label class="sr-only" for="exampleInputPassword2"> Confirm Password</label>
+                                          <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Confirm Password" required>
+                                        </div>
+                                    
+                                        <div class="checkbox">
+                                          <label><input type="checkbox"> keep me logged-in</label>
+                                        </div>
+                                    
+                                        <div class="form-group">
+                                          <a class="btn btn-sm btn-primary btn-block" href="#blog" role="button">Sign In</a>
+                                        </div>
+                                  </form>
+                              </div>
+                             </div>
+                            
+                       </li>
+                    </ul>
                   </li>
-                </ul>
-              </li>
-
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Profile &nbsp;<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <div class="navbar-content">
-                      <div class="row">
-                        <div class="col-md-5">
-                          <%= image_tag('/images/user-profile_120x120.png', size: '120x120', class: 'img-responsive') %>
-                          <p class="text-center small"><a href="#">Change Photo</a></p>
-                        </div>
-                        <div class="col-md-7">
-                          <span>User Name</span>
-                          <p class="text-muted small">username@gmail.com</p>
-                          <div class="divider"></div>
-                          <a href="#" class="btn btn-primary btn-sm active">Edit Profile</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="navbar-footer">
-                      <div class="navbar-footer-content">
-                        <div class="row">
-                          <div class="col-md-6">
-                            <a href="#" class="btn btn-default btn-sm">Change Password</a>
-                          </div>
-                          <div class="col-md-6">
-                            <a href="#" class="btn btn-default btn-sm pull-right">Sign Out</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <li><a href="#">Sign Out</a></li>
-            </ul>
+                
+                <li><p class="navbar-text">Already have an account?</p></li>
+                
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Sign In</b> <span class="caret"></span></a>
+                    <ul id="login-dp" class="dropdown-menu">
+                        <li>
+                             <div class="row">
+                                    <div class="col-md-12">
+                                        Login via<br>
+                                        <div class="social-buttons">
+                                            <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a><br>
+                                        </div>
+                                        or
+                                         <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                                                <div class="form-group">
+                                                     <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                                     <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+                                                </div>
+                                                <div class="form-group">
+                                                     <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                                     <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+                                                     <div class="help-block text-right"><a href="">Forget the password ?</a></div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <a class="btn btn-sm btn-primary btn-block" href="#blog" role="button">Sign In</a>
+                                                </div>
+                                                <div class="checkbox">
+                                                     <label>
+                                                     <input type="checkbox"> keep me logged-in
+                                                     </label>
+                                                </div>
+                                         </form>
+                                    </div>
+                                    <div class="bottom text-center">
+                                        New here ? <a href="#"><b>Join Us</b></a>
+                                    </div>
+                             </div>
+                        </li>
+                    </ul>
+                </li>
+                
+               </ul>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </div>
-  </div>
 
   <%= yield %>
 

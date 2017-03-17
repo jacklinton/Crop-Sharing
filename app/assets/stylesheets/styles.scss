@@ -26,6 +26,15 @@ h6, .h6 {
   color: #333;
 }
 
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
 
 /*
  * Override Bootstrap's default container.
@@ -119,28 +128,52 @@ overflow: hidden;
   
 }
 
-/* Fade transition for carousel items */
-.carousel .item {
-    left: 0 !important;
-      -webkit-transition: opacity .4s; /*adjust timing here */
-         -moz-transition: opacity .4s;
-           -o-transition: opacity .4s;
-              transition: opacity .4s;
-}
-.carousel-control {
-    background-image: none !important; /* remove background gradients on controls */
-}
-/* Fade controls with items */
-.next.left,
-.prev.right {
-    opacity: 1;
-    z-index: 1;
-}
-.active.left,
-.active.right {
+/* Carousel Fading slide */
+.carousel-fade .carousel-inner { background: #000; }
+.carousel-fade .carousel-control { z-index: 2; }  
+.carousel-fade .item {
+  opacity: 0.5;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  }
+
+  .carousel-fade .next.left,
+  .carousel-fade .prev.right,
+  .carousel-fade .item.active { opacity: 1; }
+
+  .carousel-fade .active.left,
+  .carousel-fade .active.right {
+    left: 0;
     opacity: 0;
-    z-index: 2;
+    z-index: 1;
+    }
+
+
+/* Safari Fix */
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
 }
+
 
 
 
@@ -187,6 +220,94 @@ overflow: hidden;
 }
 
 
+/* Signup Nav */
+#signup-dp{
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(255,255,255,.8);
+}
+#signup-dp .help-block{
+    font-size:12px    
+}
+#signup-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+#signup-dp .social-buttons{
+    margin:12px 0    
+}
+#signup-dp .social-buttons a{
+    width: 49%;
+}
+#signup-dp .form-group {
+    margin-bottom: 10px;
+}
+
+@media(max-width:768px){
+    #signup-dp{
+        background-color: inherit;
+        color: #fff;
+    }
+    #signup-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+}
+
+
+
+/* Login Nav */
+#login-dp, signup-dp{
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(255,255,255,.8);
+}
+#login-dp .help-block{
+    font-size:12px    
+}
+#login-dp, signup-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+#login-dp, signup-dp .social-buttons{
+    margin:12px 0    
+}
+#login-dp, signup-dp .social-buttons a{
+    width: 49%;
+}
+#login-dp, signup-dp .form-group {
+    margin-bottom: 10px;
+}
+.btn-fb{
+    color: #fff;
+    background-color:#3b5998;
+}
+.btn-fb:hover{
+    color: #fff;
+    background-color:#496ebc 
+}
+
+@media(max-width:768px){
+    #login-dp, signup-dp{
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp, signup-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+}
+
+
+
+
+
 /*
  * Blog name and description
  */
@@ -215,6 +336,7 @@ overflow: hidden;
   font-size: 18px;
   line-height: 1.5;
 }
+
 
 /* Sidebar modules for boxing content */
 .sidebar-module {
