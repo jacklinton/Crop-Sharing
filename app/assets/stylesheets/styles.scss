@@ -36,6 +36,15 @@ hr {
     border-width: 1px;
 }
 
+
+.img-div {
+    -moz-box-shadow:5px 5px 5px rgba(0,0,0,0.3);
+    -webkit-box-shadow:5px 5px 5px rgba(0,0,0,0.3);
+    box-shadow:5px 5px 5px rgba(0,0,0,0.3);
+}
+
+
+
 /*
  * Override Bootstrap's default container.
  */
