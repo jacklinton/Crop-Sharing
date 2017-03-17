@@ -10,15 +10,14 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.new(params[:item])
-      respond_to do |items|
+    @event = Event.last
+    @item = Item.new(event_id: @event.id)
+    @item.update_attributes!(item_params)
         if @item.save
-          items.html { redirect_to @item, notice: "Item added Successfully"}
-          items.js
+          render @item
         else
-          items.html { render action: "new" }
+          render action: "new"
         end
-      end
   end
   
   def edit

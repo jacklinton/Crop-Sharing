@@ -11,3 +11,11 @@
 <p><%= @event.description %></p>
 <br>
 <h4><%= @event.date %></h4>
+
+<ul>
+    <% @items.each do |item| %>
+    <li> 
+        <%= item.name %> | <%= item.description %>
+    </li>
+    <% end %>
+</ul>
