@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_event, only: [:update, :show, :edit]
+ 
     
   def index
     @events = Event.all
@@ -69,4 +70,8 @@ end
 
 def event_params
     params.require(:event).permit(:event_type, :lat, :lng, :name, :description, :date, :photo, :address, :private_event)
+end
+
+def item_params
+  params.require(:item).permit(:event_id, :user_id, :name, :description)
 end
