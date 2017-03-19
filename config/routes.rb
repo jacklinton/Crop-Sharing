@@ -1,12 +1,17 @@
 Rails.application.routes.draw do
 
-  get 'photos/_form'
+  get 'home/index'
+  resources :contacts, only: [:new, :create]
 
-  devise_for :users
-    root to: "home#index"
+  devise_for :users, :controllers => { registrations: 'registrations' }
+
+  root "home#index"
+  
+
     resources :listings
     resources :pictures
     resources :items
     resources :invites
     resources :events
+
 end
