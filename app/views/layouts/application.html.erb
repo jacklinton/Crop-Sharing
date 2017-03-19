@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Cropsharing</title>
-    <%= csrf_meta_tags %>
+<head>
+	<title>Cropsharing</title>
+	<%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    "https://cdn.datatables.net/1.10.13/css/dataTables.bootstrap.min.css" %>
@@ -14,7 +14,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead-addresspicker/0.1.4/typeahead-addresspicker.min.js"></script>
   </head>
 
-  <body>
-    <%= yield %>
-  </body>
+
+<body>
+	<%= render 'layouts/navbar' %>
+	   <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+
+
+	<div class="container"> 
+		<% if current_user %>
+			<%= current_user.email %>
+		<% else %>
+
+		<h1>hello</h1>
+
+
+		<% end %>
+	</div>
+		<%= yield %>
+
+</body>
 </html>
