@@ -44,6 +44,7 @@ gem 'simple_form'
 gem 'geocoder'
 gem 'gmaps4rails'
 gem 'geokit-rails'
+gem 'twitter-typeahead-rails'
 
 
 # Use Capistrano for deployment
