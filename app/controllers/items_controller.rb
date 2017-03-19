@@ -10,13 +10,12 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @event = Event.last
-    @item = Item.new(event_id: @event.id)
+    @item = Item.new()
     @item.update_attributes!(item_params)
         if @item.save
           render @item
         else
-          render action: "new"
+          redirect_to event_path(@event)
         end
   end
   
