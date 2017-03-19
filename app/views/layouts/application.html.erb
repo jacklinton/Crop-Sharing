@@ -16,19 +16,25 @@
 
 
 <body>
-	<%= render 'layouts/navbar' %>
-	   <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+	<%= render 'layouts/bar' %>
+
 
 
 	<div class="container"> 
+	   <% if notice %>
+	   	<div class="alert alert-info"><%= notice %></div>
+	   <% end %>
+
+	   <% if alert %>
+       	<div class="alert alert-warning"><%= alert %></div>
+       <% end %>
+
 		<% if current_user %>
 			<%= current_user.email %>
+			<h1>you see me, because you are signed in</h1> 
+
 		<% else %>
-
-		<h1>hello</h1>
-
-
+			<h1>nobody is signed in</h1>
 		<% end %>
 	</div>
 		<%= yield %>
