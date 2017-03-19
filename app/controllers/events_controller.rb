@@ -9,12 +9,11 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new()
-    @item = Item.new()
-    @items = Item.find_by(event_id: @event.id)
   end
 
   def show
       @event = Event.find(params[:id])
+      @item = Item.new()
       @items = Item.where(event_id: @event.id)
   end
 

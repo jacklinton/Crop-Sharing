@@ -13,6 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
-//= require turbolinks
+//= require twitter/typeahead.min
 //= require_tree .
 
