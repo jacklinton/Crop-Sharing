@@ -59,7 +59,9 @@
                         <h1>Title: <%= @listing.title %></h1>
                         <br>
                         <br>
-                        <p>Created by: <%= @listing.user_id %></p>
+                        <% @user = User.find(@listing.user_id) %>
+                        <p>Created by: <%= @user.username %></p>
+                        <%= button_to "Email Owner of This Listing", new_conversation_path, method: :get,  %>
                         <br>
                         <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?center=#{@listing.lat},#{@listing.lng}&markers=#{@listing.lat},#{@listing.lng}&zoom=15&size=640x400",
                                       class: 'img-fluid img-rounded', alt: "#{@listing.title} on the map"%>

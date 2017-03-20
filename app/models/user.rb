@@ -26,7 +26,7 @@ class User < ApplicationRecord
     
     has_attached_file :avatar,
     styles: { large: "600x600>", medium: "300x300>", thumb: "100x100>" },
-    default_url: "assets/images/shatner.jpg",
+    default_url: "shatner.png",
         :storage => :s3,
         :s3_credentials => Proc.new{|a| a.instance.s3_credentials },
         s3_region: ENV["AWS_REGION"]
