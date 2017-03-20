@@ -1,2 +1,142 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+ 
+
+    <style>
+        h1 {
+            font-size:100px;
+            font-family:"Comic Sans MS", cursive, sans-serif;
+            font-weight:200;
+            color: orange;
+            text-shadow: 1px 1px 1px #000, 3px 3px 5px white; 
+          }
+      
+        
+          
+          h3 {
+              font-size:24px;
+              font-family:Helvetica Neue, Helvetica, Arial, sans-serif;
+              font-style: italic;
+              font-weight:400;
+              color: #fff;
+              text-shadow: 1px 1px 1px #000; 
+            }
+
+    </style>
+
+
+    <script>
+      $(document).ready(function(){
+        $('.carousel').carousel({
+            interval: 5000,
+            pause: "true"
+        })
+      })
+    </script>
+  
+
+  <body>
+
+
+  <div id="myCarousel" class="carousel carousel-fade slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+
+    <div class="carousel carousel-inner carousel-fade" role="listbox">
+        <div class="item active">
+          <%= image_tag('/images/widescreen1a.jpg', width:'100%', class:'first-slide') %>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Crop Sharing</h1>
+              <h3>Caption-1 about the program.</h3>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <%= image_tag('/images/widescreen2a.jpg', width:'100%', class:'second-slide') %>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Crop Sharing</h1>
+              <h3>Caption-2 about the program.</h3>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Join Your Friends & Neighbors</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <%= image_tag('/images/widescreen3a.jpg', width:'100%', class: 'third-slide') %>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Crop Sharing</h1>
+              <h3>Caption-3 about the program.</h3>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">30-Day Free Membership</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <div class="text-center">
+      <h2>Be a Localvore - Eat & Live Locally!</h2>
+    </div>
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <%= image_tag('user-profile_140x140.png', size: '140x140', class: 'img-circle  img-div') %>
+          <h2>Barter</h2>
+          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+          <p><a class="btn btn-default img-div" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <%= image_tag('user-profile_140x140.png', size: '140x140', class: 'img-circle img-div') %>
+          <h2>Trade</h2>
+          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+          <p><a class="btn btn-default img-div" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <%= image_tag('user-profile_140x140.png', size: '140x140',  class: 'img-circle img-div') %>
+          <h2>Purchase</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn btn-default img-div" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2017 The CropSharing Company, Org. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+
+
+
+
+
+  </body>
+
