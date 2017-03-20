@@ -33,7 +33,7 @@
                 <li class="sidebar-brand">
                 </li>
                 <li>
-                    <%= image_tag current_user.avatar %>
+                    <%= image_tag current_user.avatar:thumbnail %>
                 </li>
                 <li>
                     <%= link_to "Hello, #{current_user.username}", "#" %>
@@ -42,7 +42,13 @@
                     <%= link_to "Inbox", mailbox_inbox_path %>
                 </li>
                 <li>
-                    <a href="#">Events</a>
+                    <a href="events/index">Events</a>
+                </li>
+                <li>
+                    <%= link_to "Create New Listing", new_listing_path %>
+                </li>
+                <li>
+                    <%= link_to "Create New Event", new_event_path %>
                 </li>
                 <% else %>
                 <% end %>

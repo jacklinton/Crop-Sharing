@@ -54,7 +54,35 @@
                 <div class="row">
                     <div class="col-lg-12">
                         
-                        <%= render "editform" %>
+                        <%= image_tag @user.avatar %>
+
+                        <h1><%= @user.username %></h1>
+                        
+                        <p>This user's listings:</p>
+                        <ol>
+                            <% @listings.each do |l| %>
+                            <li>
+                                <%= link_to l.title, listings_path(l) %>
+                            </li>
+                            <% end %>
+                        </ol>
+                        <p>This user's events:</p>
+                        <ol>
+                            <% @events.each do |e| %>
+                            <li>
+                                <%= link_to e.name, events_path(e) %>
+                            </li>
+                            <% end %>
+                        </ol>
+                        
+                        <h3>Change your location setting:</h3>
+                        <%= render "maps/form" %>
+                        
+                        <h3>Upload an avatar file</h3>
+                        <%= simple_form_for @user do |f| %>
+                            <%= f.input :avatar, as: :file %>
+                            <%= f.button :submit, class: "btn btn-primary" %>
+                        <% end %>
                         
                         
                         

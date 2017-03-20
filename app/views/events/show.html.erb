@@ -1,24 +1,95 @@
-<h1>Events#show</h1>
-<p>Find me in app/views/events/show.html.erb</p>
+<!DOCTYPE html>
+<html lang="en">
 
-<h1><%= @event.name %></h1>
-<br>
-<br>
-<p><%= image_tag @event.photo:medium %></p>
-<br>
-<h2><%= @event.event_type %></h2>
-<br>
-<p><%= @event.description %></p>
-<br>
-<h4><%= @event.date %></h4>
+<head>
 
-<%= render "items/form" %>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<ol id="items">
-    <% @items.each do |item| %>
-    <li> 
-        <h4><%= item.name %></h4>
-        <%= item.description %>
-    </li>
-    <% end %>
-</ol>
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+    <body>
+    
+        <div id="wrapper">
+    
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav">
+                    <% if user_signed_in? %>
+                    <li class="sidebar-brand">
+                    </li>
+                    <li>
+                        <%= image_tag current_user.avatar::thumbnail %>
+                    </li>
+                    <li>
+                        <%= link_to "Hello, #{current_user.username}", "#" %>
+                    </li>
+                    <li>
+                        <%= link_to "Inbox", mailbox_inbox_path %>
+                    </li>
+                    <li>
+                        <a href="/events/index">Events</a>
+                    </li>
+                    <% else %>
+                    <% end %>
+                </ul>
+            </div>
+            <!-- /#sidebar-wrapper -->
+    
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-med-8">
+                            
+                            <h1><%= @event.name %></h1>
+                            <br>
+                            <br>
+                            <p><%= image_tag @event.photo:medium %></p>
+                            <br>
+                            <h2><%= @event.event_type %></h2>
+                            <br>
+                            <p><%= @event.description %></p>
+                            <br>
+                            <h4>Date of Event: <%= @event.date %></h4>
+                            <br>
+                            <%= button_to "Email Creator of This Event", new_conversation_path, method: :get  %>
+                            <br>
+                            <%= render "items/form" %>
+                            
+                            <ol id="items">
+                                <% @items.each do |item| %>
+                                <li> 
+                                    <h4><%= item.name %></h4>
+                                    <%= item.description %>
+                                </li>
+                                <% end %>
+                            </ol>
+                            
+                            
+                            
+                            <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /#page-content-wrapper -->
+    
+        </div>
+    
+    </body>
+
+</html>
+

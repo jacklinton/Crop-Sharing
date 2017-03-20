@@ -1,31 +1,126 @@
- <div>     
-    <h1>Listings Table</h1>    
-        <table id="listings" class="display responsive no-wrap table table-striped" classspacing="0" width="100%">
-            <thead class="thead-default">
-                <tr>
-                    <th>Picture</th>
-                    <th>Title</th>
-                    <th>Distance</th>
-                    <th>Description</th>
-                    <th>Accepting Cash?</th>
-                    <th>Accepting Trade?</th>
-                    <th>Wants</th>
-                    <th>Link</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% @listings.each do |l| %>
-                    <tr>
-                        <td><%= image_tag l.picture:thumb %></td>
-                        <td><%= l.title %></td>
-                        <td>distance</td>
-                        <td><%= l.description %></td>
-                        <td><%= l.acc_cash %></td>
-                        <td><%= l.acc_trade %></td>
-                        <td><%= l.wants %></td>
-                        <td><%= link_to "Read more", listing_path(l) %></td>
-                    </tr>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <% if user_signed_in? %>
+                <li class="sidebar-brand">
+                </li>
+                <li>
+                    <%= image_tag current_user.avatar:thumbnail %>
+                </li>
+                <li>
+                    <%= link_to "Hello, #{current_user.username}", "#" %>
+                </li>
+                <li>
+                    <%= link_to "Inbox", mailbox_inbox_path %>
+                </li>
+                <li>
+                    <a href="/events/index">Events</a>
+                </li>
+                <li>
+                    <%= link_to "Create New Listing", new_listing_path %>
+                </li>
+                <li>
+                    <%= link_to "Create New Event", new_event_path %>
+                </li>
+                
+                <% else %>
                 <% end %>
-            </tbody>
-        </table>
-</div>  
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        
+                        <div>     
+                            <h1>Listings Table</h1>    
+                                <table id="listings" class="display responsive no-wrap table table-striped" classspacing="0" width="100%">
+                                    <thead class="thead-default">
+                                        <tr>
+                                            <th>Picture</th>
+                                            <th>Title</th>
+                                            <th>Distance</th>
+                                            <th>Description</th>
+                                            <th>Accepting Cash?</th>
+                                            <th>Accepting Trade?</th>
+                                            <th>Wants</th>
+                                            <th>Link</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% @listings.each do |l| %>
+                                            <tr>
+                                                <td><%= image_tag l.picture:thumb %></td>
+                                                <td><%= l.title %></td>
+                                                <td>distance</td>
+                                                <td><%= l.description %></td>
+                                                <td><%= l.acc_cash %></td>
+                                                <td><%= l.acc_trade %></td>
+                                                <td><%= l.wants %></td>
+                                                <td><%= link_to "Read more", listing_path(l) %></td>
+                                            </tr>
+                                        <% end %>
+                                    </tbody>
+                                </table>
+                        </div>  
+                        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+                        <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div style='width: 800px;'>
+                                          <div id="map" style='width: 800px; height: 400px;'>
+                                              <script>handler = Gmaps.build('Google');
+                                                        handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+                                                          markers = handler.addMarkers(
+                                                        
+                                                        <%= raw @listingshash.to_json %>
+                                                      );
+                                                      handler.bounds.extendWith(markers);
+                                                      handler.bounds.extendWith(markers);
+                                                      handler.map.centerOn({ lat: <%= @user.lat %>, lng: <%= @user.lng %> })
+                                                    });</script>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+
+</body>
+
+</html>

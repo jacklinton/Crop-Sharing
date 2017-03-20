@@ -13,12 +13,13 @@
           <ul class="nav navbar-nav">
             <li><%= link_to "Listings", listings_path %></li>
             <li><%= link_to "Events", events_path %></li>
+            <li><%= link_to "Map", maps_path %></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
 
             <% if current_user %>
-              <li><%= link_to current_user.username ? current_user.username : current_user.email, root_path %> </li>
+              <li><%= link_to current_user.username, user_path(current_user) %> </li>
               <li><%= link_to "Sign out", destroy_user_session_path,  method: :DELETE %></li>
 
             <% else %>

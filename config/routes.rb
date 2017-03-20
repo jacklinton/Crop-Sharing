@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-
+  default_url_options :host => "https://locavore-jacklinton.c9users.io"
+  
   resources :contacts, only: [:new, :create]
 
   devise_for :users, :controllers => { registrations: 'registrations' }
