@@ -1,0 +1,4 @@
+$("#photos").append("<% link_to photo_path(photo) <%= image_tag photo.file:thumb %> %>")
+console.log("Done.")
+
+$('#new_photo').trigger("reset")
