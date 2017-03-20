@@ -14,5 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require twitter/typeahead.min
+//= require underscore
+//= require gmaps/google
 //= require_tree .
 

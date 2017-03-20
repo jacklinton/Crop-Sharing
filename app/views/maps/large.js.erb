@@ -1,0 +1,24 @@
+$(document).ready(function(){
+handler = Gmaps.build('Google');
+handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+  markers = handler.addMarkers([
+    {
+      "lat": <%= @user.lat %>,
+      "lng": <%= @user.lng %>,
+      "picture": {
+        "url": "http://people.mozilla.com/~faaborg/files/shiretoko/firefoxIcon/firefox-32.png",
+        "width":  32,
+        "height": 32
+      },
+      "infowindow": "hello!"
+    }, 
+    {<%=raw @usershash.to_json %>},
+    {<%=raw @eventshash.to_json %>},
+    {<%=raw @listingshash.to_json %>}
+  ]);
+  handler.bounds.extendWith(markers);
+  handler.fitMapToBounds();
+  handler.map.centerOn({ lat: <%= @user.lat %>, lng: <%= @user.lng %> })
+});
+})
+

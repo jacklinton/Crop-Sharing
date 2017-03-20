@@ -1,0 +1,5 @@
+
+<%= simple_form_for @user do |f| %>
+    <%= f.input :address, as: :search, input_html: { class: "address" } %>
+    <%= f.button :submit, class: "btn btn-search" %>
+<% end %>

@@ -9,9 +9,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag "https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js" %>
     <%= javascript_include_tag "https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js" %>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<%=ENV['GMAPS_API_KEY']%>&libraries=places"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.10.4/dist/typeahead.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead-addresspicker/0.1.4/typeahead-addresspicker.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script> 
+	<script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
   </head>
 
 
@@ -28,14 +30,6 @@
 	   <% if alert %>
        	<div class="alert alert-warning"><%= alert %></div>
        <% end %>
-
-		<% if current_user %>
-			<%= current_user.email %>
-			<h1>you see me, because you are signed in</h1> 
-
-		<% else %>
-			<h1>nobody is signed in</h1>
-		<% end %>
 	</div>
 		<%= yield %>
 
