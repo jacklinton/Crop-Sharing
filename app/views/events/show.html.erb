@@ -11,3 +11,14 @@
 <p><%= @event.description %></p>
 <br>
 <h4><%= @event.date %></h4>
+
+<%= render "items/form" %>
+
+<ol id="items">
+    <% @items.each do |item| %>
+    <li> 
+        <h4><%= item.name %></h4>
+        <%= item.description %>
+    </li>
+    <% end %>
+</ol>
