@@ -11,6 +11,8 @@ class Listing < ApplicationRecord
     reverse_geocoded_by :lat, :lng
     after_validation :reverse_geocode
     
+    acts_as_mappable
+    
     has_attached_file :picture,
     styles: { large: "600x600>", medium: "300x300>", thumb: "100x100>" },
     default_url: "/images/:style/missing.png",

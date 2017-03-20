@@ -11,6 +11,8 @@ class User < ApplicationRecord
     
     reverse_geocoded_by :lat, :lng
     after_validation :reverse_geocode
+    
+    acts_as_mappable
          
    has_many :invites
    has_many :items
