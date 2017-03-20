@@ -1,3 +1,4 @@
+$(document).ready(function(){
 handler = Gmaps.build('Google');
 handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
   markers = handler.addMarkers([
@@ -10,10 +11,14 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
         "height": 32
       },
       "infowindow": "hello!"
-    }
+    }, 
+    {<%=raw @usershash.to_json %>},
+    {<%=raw @eventshash.to_json %>},
+    {<%=raw @listingshash.to_json %>}
   ]);
   handler.bounds.extendWith(markers);
   handler.fitMapToBounds();
   handler.map.centerOn({ lat: <%= @user.lat %>, lng: <%= @user.lng %> })
 });
+})
 
