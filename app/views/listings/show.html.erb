@@ -31,7 +31,7 @@
                 <li class="sidebar-brand">
                 </li>
                 <li>
-                    <%= image_tag current_user.avatar %>
+                    <%= image_tag current_user.avatar:thumbnail %>
                 </li>
                 <li>
                     <%= link_to "Hello, #{current_user.username}", "#" %>
@@ -67,7 +67,7 @@
                         <br>
                         <% @user = User.find(@listing.user_id) %>
                         <p>Created by: <%= @user.username %></p>
-                        <%= button_to "Email Owner of This Listing", new_conversation_path, method: :get,  %>
+                        <%= button_to "Email Owner of This Listing", new_conversation_path, method: :get %>
                         <br>
                         <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?center=#{@listing.lat},#{@listing.lng}&markers=#{@listing.lat},#{@listing.lng}&zoom=15&size=640x400",
                                       class: 'img-fluid img-rounded', alt: "#{@listing.title} on the map"%>

@@ -1,18 +1,19 @@
 class UsersController < ApplicationController
 	before_action :authenticate_user!
-	before_action :set_user 
+	before_action :set_user, only: [:update, :show, :edit]
 	
 	def index
 		
 	end
 	
 	def show
-		
+		@listings = Listing.where(user_id: params[:id])
+		@events = Event.where(user_id: params[:id])
 	end
 	
 	def update
 		@user = current_user
-		@user.update_attributes(address: user_params[:address])
+		@user.update_attributes(user_params)
 		if @user.save
 			flash[:notice] = "You have updated your user settings!"
 			redirect_to(:back)
@@ -30,5 +31,5 @@ def set_user
 end
 
 def user_params
-	params.require(:user).permit(:id, :address, :lat, :lng)	
+	params.require(:user).permit(:id, :address, :lat, :lng, :avatar)	
 end
