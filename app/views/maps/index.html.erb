@@ -7,8 +7,8 @@
                 
                 <%= raw @usershash.to_json %>
               );
-            
-              handler.fitMapToBounds();
+              handler.bounds.extendWith(markers);
+              handler.bounds.extendWith(markers);
               handler.map.centerOn({ lat: <%= @user.lat %>, lng: <%= @user.lng %> })
             });</script>
   </div>
