@@ -22,5 +22,5 @@
 <br>
 <p><%= image_tag @listing.picture %> </p>
 
-<%= button_to "Edit Listing", edit_listing_path(@listing), method: :get, html: { class: "btn btn-primary" } %>
-<%= button_to "Delete Listing", listing_path(@listing), method: :delete, html: { class: "btn btn-primary" } %>
+<%= button_to "Edit Listing", edit_listing_path(@listing), method: :get, class: "btn btn-primary" %>
+<%= button_to "Delete Listing", listing_path(@listing), method: :delete, class: "btn btn-warning" %>

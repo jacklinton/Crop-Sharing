@@ -6,7 +6,7 @@
     <%= f.input :acc_trade, input_html: { value: @listing.acc_trade } %>
     <%= f.input :description, input_html: { value: @listing.description } %>
     <%= f.input :wants, input_html: { value: @listing.wants} %>
-    <%= f.input :quantity, value: @listing.quantity} %>
+    <%= f.input :quantity, { value: @listing.quantity} %>
     <%= f.input :harvest_date, as: :date, html5: true, input_html: { value: @listing.harvest_date } %>
     <%= f.input :exp_date, as: :date, html5: true, input_html: { value: @listing.exp_date } %>
     <%= f.input :picture, as: :file %>
