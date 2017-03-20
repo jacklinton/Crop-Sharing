@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'maps/_form'
+
+  get 'maps/_small'
+
+  get 'maps/_large'
+
   get 'home/index'
   resources :contacts, only: [:new, :create]
 
