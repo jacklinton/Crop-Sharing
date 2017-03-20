@@ -1,5 +1,5 @@
-<h1>Items#_form</h1>
-<p>Find me in app/views/items/_form.html.erb</p>
+
+<p>Have anything you want people to bring? Make a list by entering the items below.</p>
 <%= simple_form_for(@item, remote: true, html: { id: "new_item" }) do |f| %>
     <%= f.input :event_id, as: :hidden, input_html: { value: params[:id] } %>
     <%= f.input :name %>

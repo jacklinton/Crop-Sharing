@@ -14,7 +14,7 @@ class UsersController < ApplicationController
 		@user = current_user
 		@user.update_attributes(address: user_params[:address])
 		if @user.save
-			flash[:notice] = "You have updates your user settings!"
+			flash[:notice] = "You have updated your user settings!"
 			redirect_to(:back)
 		else
 			flash[:alert] = "There was a problem changing your settings."
