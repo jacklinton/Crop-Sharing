@@ -38,13 +38,13 @@
                 <li class="sidebar-brand">
                 </li>
                 <li>
-                    <a href="#">Dashboard</a>
+                    <%= image_tag current_user.avatar %>
                 </li>
                 <li>
-                    <a href="#">Shortcuts</a>
+                    <%= link_to "Hello, #{current_user.name}", "#" %>
                 </li>
                 <li>
-                    <a href="#">Overview</a>
+                    <%= link_to "Inbox", mailbox_inbox_path %>
                 </li>
                 <li>
                     <a href="#">Events</a>

@@ -13,6 +13,16 @@ class User < ApplicationRecord
     after_validation :reverse_geocode
     
     acts_as_mappable
+    
+    acts_as_messageable
+    
+    def mailboxer_name
+      self.username
+    end
+
+    def mailboxer_email(object)
+      self.email
+    end
          
    has_many :invites
    has_many :items
