@@ -13,6 +13,28 @@ class User < ApplicationRecord
     after_validation :reverse_geocode
     
     acts_as_mappable
+    
+    acts_as_messageable
+    
+    def mailboxer_name
+      self.username
+    end
+
+    def mailboxer_email(object)
+      self.email
+    end
+    
+    has_attached_file :avatar,
+    styles: { large: "600x600>", medium: "300x300>", thumb: "100x100>" },
+    default_url: "/images/:style/missing.png",
+        :storage => :s3,
+        :s3_credentials => Proc.new{|a| a.instance.s3_credentials },
+        s3_region: ENV["AWS_REGION"]
+    validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
+
+  def s3_credentials
+    {:bucket => "railsblogbucket", :access_key_id => ENV["AWS_ACCESS_KEY_ID"], :secret_access_key => ENV["AWS_SECRET_ACCESS_KEY"]}
+  end
          
    has_many :invites
    has_many :items

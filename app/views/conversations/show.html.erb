@@ -11,6 +11,8 @@
 
     <title>Simple Sidebar - Start Bootstrap Template</title>
 
+    <!-- Bootstrap Core CSS -->
+    
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -35,13 +37,13 @@
                     <%= image_tag current_user.avatar %>
                 </li>
                 <li>
-                    <%= link_to "Hello, #{current_user.username}", "#" %>
+                    <%= link_to "Hello, #{current_user.name}", "#" %>
                 </li>
                 <li>
                     <%= link_to "Inbox", mailbox_inbox_path %>
                 </li>
                 <li>
-                    <a href="/events/index">Events</a>
+                    <a href="#">Events</a>
                 </li>
                 <% else %>
                 <% end %>
@@ -54,36 +56,41 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div>     
-                            <h1>Listings Table</h1>    
-                                <table id="listings" class="display responsive no-wrap table table-striped" classspacing="0" width="100%">
-                                    <thead class="thead-default">
-                                        <tr>
-                                            <th>Picture</th>
-                                            <th>Name</th>
-                                            <th>Distance</th>
-                                            <th>Type</th>
-                                            <th>Description</th>
-                                            <th>Date</th>
-                                            <th>Link</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <% @events.each do |l| %>
-                                            <tr>
-                                                <td><%= image_tag l.photo:thumb %></td>
-                                                <td><%= l.name %></td>
-                                                <td>distance</td>
-                                                <td><%= l.event_type %></td>
-                                                <td><%= l.description %></td>
-                                                <td><%= l.date %></td>
-                                                <td><%= link_to "Read more", event_path(l) %></td>
-                                            </tr>
-                                        <% end %>
-                                        </tbody>
-                                </table>
-                        </div>  
                         
+                        <div class="row">
+                          <div class="spacer"></div>
+                          <div class="col-md-12">
+                            <%= link_to "Compose", new_conversation_path, class: "btn btn-success" %>
+                            <div class="spacer"></div>
+                          </div>
+                        
+                          <div class="col-md-4">
+                            <div class="panel panel-default">
+                              <div class="panel-body">
+                                <%= render 'mailbox/folders' %>
+                              </div>
+                            </div>
+                          </div>
+                        
+                          <div class="col-md-8">
+                            <div class="panel panel-default">
+                              <div class="panel-body">
+                                <%= render partial: 'messages' %>
+                              </div>
+                              <div class="panel-footer">
+                                <!-- Reply Form -->
+                                <%= form_for :message, url: reply_conversation_path(conversation) do |f| %>
+                                    <div class="form-group">
+                                      <%= f.text_area :body, placeholder: "Reply Message", rows: 4, class: "form-control" %>
+                                    </div>
+                                    <%= f.submit "Reply", class: 'btn btn-danger pull-right' %>
+                                <% end %>
+                                <div class="clearfix"></div>
+                              </div>
+                            </div>
+                          </div>
+                        
+                        </div>
                         
                         
                         
