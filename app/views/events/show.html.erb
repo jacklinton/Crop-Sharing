@@ -65,6 +65,7 @@
                             <br>
                             <h4>Date of Event: <%= @event.date %></h4>
                             <br>
+                            <%= button_to "Email Creator of This Event", new_conversation_path, method: :get  %>
                             <br>
                             <%= render "items/form" %>
                             

@@ -4,6 +4,12 @@ class ListingsController < ApplicationController
     
     def index
         @listings = Listing.all
+        @user = current_user
+        @listingshash = Gmaps4rails.build_markers(@listings) do |listing, marker|
+          marker.lat listing.lat
+          marker.lng listing.lng
+          marker.title listing.title
+        end
     end
     
     def new
@@ -37,7 +43,7 @@ class ListingsController < ApplicationController
     end
     
     def show
-        
+        @user = current_user
     end
     
     def create
