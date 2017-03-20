@@ -1,0 +1,21 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+ h1 {
+    font-size:100px;
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-weight:200;
+    color: orange;
+    text-shadow: 1px 1px 1px #000, 3px 3px 5px white; 
+  }
+
+
+  
+ h3 {
+      font-size:24px;
+      font-family:Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-style: italic;
+      font-weight:400;
+      color: #fff;
+      text-shadow: 1px 1px 1px #000; 
+   }

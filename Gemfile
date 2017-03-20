@@ -50,6 +50,7 @@ gem 'gmaps4rails'
 gem 'geokit-rails'
 gem 'twitter-typeahead-rails'
 gem 'underscore-rails'
+gem 'mailboxer'
 
 
 # Use Capistrano for deployment
